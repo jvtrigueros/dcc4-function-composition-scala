@@ -126,6 +126,41 @@ nums map incrementor
         <h1>Function Composition</h1>
         <h2>\[ (f\circ g)(x) \]</h2>
       </section>
+
+      <section>
+        <section>
+          <h2>Just like Algebra</h2>
+          <p>Functions are nothing more than a transformation of an input.</p>
+        </section>
+
+        <section>
+          <h2>Function Composition in Scala</h2>
+          \[ f(x) = {x \over 2},~ g(x) = x^2 \rightarrow (f\circ g)(x) \]
+        <pre class="fragment"><code class="scala">
+val f: Int => Double = x => x / 2.0
+  // => f: Int => Double = &lt;function1&gt;
+val g: Int => Int = x => x * x
+  // => g: Int => Int =  &lt;function1&gt;
+        </code></pre>
+        <pre class="fragment"><code class="scala">
+val x = 5
+f(g(x))
+  // => Double = 12.5
+        </code></pre>
+        <pre class="fragment"><code class="scala">
+val fog = f compose g
+  // => Int => Double = &lt;function1&gt;
+fog(x)
+  // => Double = 12.5
+        </code></pre>
+        <pre class="fragment"><code class="scala">
+g andThen f
+  // => Int => Double = &lt;function1&gt;
+        </code></pre>
+        </section>
+      </section>
+
+
     </div>
   </div>
 
