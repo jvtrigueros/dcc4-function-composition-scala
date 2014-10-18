@@ -31,15 +31,15 @@
         <a href="http://twitter.com/jvtrigueros">@jvtrigueros</a>
       </section>
 
-      <section>
-        <h1>What is Scala?</h1>
-        <blockquote cite="http://en.wikipedia.org/wiki/Scala_(programming_language)">
-          Scala is an object-functional programming and scripting language for general
-          software applications.
-        </blockquote>
-      </section>
-
       <section id="diff-scala-vs-java">
+        <section>
+          <h1>What is Scala?</h1>
+          <blockquote cite="http://en.wikipedia.org/wiki/Scala_(programming_language)">
+            Scala is an object-functional programming and scripting language for general
+            software applications.
+          </blockquote>
+        </section>
+
         <section>
           <h2>Type Inference</h2>
           <pre><code class="scala">
@@ -62,20 +62,26 @@ b = 11
         </section>
 
         <section>
-          <h2>No semicolons =D</h2>
+          <h2>No forced Exception handling</h2>
+          <img src="images/ninja-cat.gif" width="600px" alt="ninja-cat"/>
+        </section>
+
+        <section>
+          <h2>No semicolons!</h2>
+          <img src="images/no-semicolon.jpg" alt="no-semicolons"/>
         </section>
       </section>
 
-      <section>
-        <h1>Syntax</h1>
-      </section>
-
       <section id="syntax">
+        <section>
+          <h1>Syntax</h1>
+        </section>
+
         <section><h2>Function Notation</h2>
           <pre><code class="java">
-x: Int => y: Int
+val f: Int => Int = ...
 
-str: String => freq: List[Double]
+val g: String => List[Double] = ...
           </code></pre>
         </section>
 
@@ -103,7 +109,7 @@ nums.foreach( println(_) )
         </section>
 
         <section>
-          <h2><i>Similar</i> but not the Same</h2>
+          <h2><i>Same</i> but not the Same</h2>
           <pre><code>
 nums.map( num => incrementor(num) )
 
@@ -119,7 +125,7 @@ nums map incrementor
       <section>
         <h1>REPL</h1>
         <h2>Read Evaluate Print Loop</h2>
-        <p>Creates an interactive shell that may aid in development.</p>
+        <p>Creates an interactive shell that aids in the development.</p>
       </section>
 
       <section>
@@ -160,7 +166,18 @@ g andThen f
         </section>
       </section>
 
+      <section>
+        <section><h1>Currying</h1></section>
 
+        <section>
+          <h2>Not this kind...</h2>
+          <img src="images/curry.jpg" alt="curry"/>
+        </section>
+      </section>
+
+      <section>
+        <h1>Partial Functions or Partial Application</h1>
+      </section>
     </div>
   </div>
 
