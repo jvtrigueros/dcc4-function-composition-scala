@@ -186,10 +186,73 @@ g andThen f
           <img src="images/curry.jpg" alt="curry"/>
         </section>
 
+        <section>
+          <h2>This kind</h2>
+
+          <p class="fragment fade-out">
+            \[\begin{align*}
+            f(x, y, z) \rightarrow f(x)(y)(z)
+            \\
+            \\ f(x)
+            \\ (f(x)(y))
+            \\ (f(x)(y))(z)
+            \end{align*}\]
+          </p>
+          <p class="fragment">
+            \[ ((f ~ x) ~ y) ~ z) \]
+          </p>
+        </section>
+
+        <section>
+          <h2>Example</h2>
+          <pre><code class="scala">
+def f(x: Int)(y: Double): Double = {
+  (x * x) / y
+}
+
+f(2)(5.0)
+  // => Double = 0.8
+
+val g = f(2) _
+  // => g: Double => Double = &lt;function1&gt;
+
+g(5.0)
+  // => Double = 0.8
+          </code></pre>
+        </section>
       </section>
 
       <section id="partial-functions">
-        <h1>Partial Functions or Partial Application</h1>
+        <section>
+          <h1>Partial Functions</h1>
+          <p>A function that hasn't been realized.</p>
+        </section>
+
+        <section>
+          <h2>Example</h2>
+          <pre><code class="scala">
+def f(x: Int, y: Int, z: Int) = x + y + z
+          </code></pre>
+          <pre class="fragment"><code class="scala">
+val g: Int => Int = f(_, 10, 5)
+  // => g: Int => Int = &lt;function1&gt;
+          </code></pre>
+          <pre class="fragment"><code class="scala">
+g(5)
+  // => Int = 20
+          </code></pre>
+        </section>
+      </section>
+
+      <section>
+        <h1>Use Case: Swing</h1>
+      </section>
+
+      <section>
+        <h1>Questions?</h1>
+        <p>Slidedeck: <a href="http://bit.ly/dcc4-fun-deck">bit.ly/dcc4-fun-deck</a></p>
+        <p>Code Examples: <a href="http://bit.ly/dcc4-fun-code">bit.ly/dcc4-fun-code</a></p>
+        <p>Twitter: <a href="http://twitter.com/jvtrigueros">@jvtrigueros</a></p>
       </section>
     </div>
   </div>
