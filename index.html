@@ -31,7 +31,7 @@
         <a href="http://twitter.com/jvtrigueros">@jvtrigueros</a>
       </section>
 
-      <section id="diff-scala-vs-java">
+      <section id="define-scala">
         <section>
           <h1>What is Scala?</h1>
           <blockquote cite="http://en.wikipedia.org/wiki/Scala_(programming_language)">
@@ -112,28 +112,40 @@ nums.foreach( println(_) )
           <h2><i>Same</i> but not the Same</h2>
           <pre><code>
 nums.map( num => incrementor(num) )
+          </code></pre>
 
+          <pre class="fragment"><code class="scala">
 nums.map( incrementor(_) )
+          </code></pre>
 
+          <pre class="fragment"><code class="scala">
 nums.map( incrementor )
+          </code></pre>
 
+          <pre class="fragment"><code class="scala">
 nums map incrementor
           </code></pre>
         </section>
       </section>
 
-      <section>
-        <h1>REPL</h1>
-        <h2>Read Evaluate Print Loop</h2>
-        <p>Creates an interactive shell that aids in the development.</p>
+      <section id="repl">
+        <section>
+          <h1>REPL</h1>
+          <h2>Read Evaluate Print Loop</h2>
+          <p>Creates an interactive shell that aids in the development.</p>
+        </section>
+
+        <section>
+          <h1>Demo</h1>
+        </section>
       </section>
 
-      <section>
-        <h1>Function Composition</h1>
-        <h2>\[ (f\circ g)(x) \]</h2>
-      </section>
+      <section id="function-composition">
+        <section>
+          <h1>Function Composition</h1>
+          <h2>\[ (f\circ g)(x) \]</h2>
+        </section>
 
-      <section>
         <section>
           <h2>Just like Algebra</h2>
           <p>Functions are nothing more than a transformation of an input.</p>
@@ -166,16 +178,17 @@ g andThen f
         </section>
       </section>
 
-      <section>
+      <section id="currying">
         <section><h1>Currying</h1></section>
 
         <section>
           <h2>Not this kind...</h2>
           <img src="images/curry.jpg" alt="curry"/>
         </section>
+
       </section>
 
-      <section>
+      <section id="partial-functions">
         <h1>Partial Functions or Partial Application</h1>
       </section>
     </div>
