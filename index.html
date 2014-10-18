@@ -30,6 +30,97 @@
         <p>Been using Scala for 2 years</p>
         <a href="http://twitter.com/jvtrigueros">@jvtrigueros</a>
       </section>
+
+      <section>
+        <h1>What is Scala?</h1>
+        <blockquote cite="http://en.wikipedia.org/wiki/Scala_(programming_language)">
+          Scala is an object-functional programming and scripting language for general
+          software applications.
+        </blockquote>
+      </section>
+
+      <section id="diff-scala-vs-java">
+        <section>
+          <h2>Type Inference</h2>
+          <pre><code class="scala">
+val a = 10
+val b: Int = 10
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Immutable by default</h2>
+          <pre><code class="scala">
+val a = 10
+a = 11
+  // => error: reassignment to val
+
+var b = 10
+b = 11
+  // => b: Int = 11
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>No semicolons =D</h2>
+        </section>
+      </section>
+
+      <section>
+        <h1>Syntax</h1>
+      </section>
+
+      <section id="syntax">
+        <section><h2>Function Notation</h2>
+          <pre><code class="java">
+x: Int => y: Int
+
+str: String => freq: List[Double]
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>List Operations</h2>
+          <pre><code class="scala">
+val nums = List(1, 2, 3, 4)
+
+val printer = (x: Int) => println(x)
+val incrementor = (x: Int) => x + 1
+
+nums.foreach( num => printer(num) )
+// prints the numbers 1-5
+
+nums.map( num => incrementor(num) )
+// => List[Int] = List(2, 3, 4, 5)
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Underscore</h2>
+          <pre><code>
+nums.foreach( println(_) )
+          </code></pre>
+        </section>
+
+        <section>
+          <h2><i>Similar</i> but not the Same</h2>
+          <pre><code>
+nums.map( num => incrementor(num) )
+
+nums.map( incrementor(_) )
+
+nums.map( incrementor )
+
+nums map incrementor
+          </code></pre>
+        </section>
+      </section>
+
+      <section>
+        <h1>REPL</h1>
+        <h2>Read Evaluate Print Loop</h2>
+        <p>Creates an interactive shell that may aid in development.</p>
+      </section>
     </div>
   </div>
 
